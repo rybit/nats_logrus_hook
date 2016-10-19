@@ -1,0 +1,45 @@
+hash: 41357369e02903799e65ee8b7d041a2565c002c32193ccc952edb9f339fdc1ed
+updated: 2016-10-19T13:25:12.673714174-07:00
+imports:
+- name: github.com/nats-io/gnatsd
+  version: 10cd7aa16dee1346be2735ec5337d5b321268dfe
+  subpackages:
+  - server
+  - test
+  - conf
+  - server/pse
+  - auth
+- name: github.com/nats-io/nats
+  version: 6b36ef1fe4714d0bff9316385f3b5410a378a6f9
+  subpackages:
+  - test
+  - encoders/builtin
+- name: github.com/nats-io/nuid
+  version: 289cccf02c178dc782430d534e3c1f5b72af807f
+- name: github.com/Sirupsen/logrus
+  version: 4b6ea7319e214d98c938f12692336f7ca9348d6b
+  subpackages:
+  - hooks/test
+- name: golang.org/x/crypto
+  version: 9e7f5dc375abeb9619ea3c5c58502c428f457aa2
+  repo: https://go.googlesource.com/crypto
+  subpackages:
+  - bcrypt
+  - blowfish
+- name: golang.org/x/sys
+  version: 002cbb5f952456d0c50e0d2aff17ea5eca716979
+  subpackages:
+  - unix
+testImports:
+- name: github.com/davecgh/go-spew
+  version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: d8ed2627bdf02c080bf22230dbb337003b7aba2d
+  subpackages:
+  - difflib
+- name: github.com/stretchr/testify
+  version: 69483b4bd14f5845b5a1e55bca19e954e827f1d0
+  subpackages:
+  - assert
