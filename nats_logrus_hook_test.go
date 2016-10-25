@@ -39,10 +39,7 @@ func TestSimpleSend(t *testing.T) {
 	}
 	defer sub.Unsubscribe()
 
-	hook, err := NewNatsHook(nc, "test")
-	if !assert.NoError(t, err) {
-		return
-	}
+	hook := NewNatsHook(nc, "test")
 
 	hook.AddField("hook-level", "pikachu")
 	hook.AddDynamicField("dynamic-level", func() interface{} {

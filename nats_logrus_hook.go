@@ -37,11 +37,7 @@ func AddNatsHook(conf *HookConf) (*nats.Conn, *NatsHook, error) {
 		return nil, nil, err
 	}
 
-	hook, err := NewNatsHook(nc, conf.Subject)
-	if err != nil {
-		return nil, nil, err
-	}
-
+	hook := NewNatsHook(nc, conf.Subject)
 	for k, v := range conf.Dimensions {
 		hook.AddField(k, v)
 	}
@@ -53,7 +49,7 @@ func AddNatsHook(conf *HookConf) (*nats.Conn, *NatsHook, error) {
 
 // NewNatsHook will create a logrus hook that will automatically send
 // new info into the channel
-func NewNatsHook(conn *nats.Conn, subject string) (*NatsHook, error) {
+func NewNatsHook(conn *nats.Conn, subject string) *NatsHook {
 	hook := NatsHook{
 		conn:          conn,
 		subject:       subject,
@@ -70,7 +66,7 @@ func NewNatsHook(conn *nats.Conn, subject string) (*NatsHook, error) {
 		},
 	}
 
-	return &hook, nil
+	return &hook
 }
 
 // AddField will add a simple value each emission
