@@ -21,7 +21,7 @@ type NatsHook struct {
 	subject       string
 	extraFields   map[string]interface{}
 	dynamicFields map[string]func() interface{}
-	formatter     logrus.Formatter
+	Formatter     logrus.Formatter
 
 	LogLevels []logrus.Level
 }
@@ -55,7 +55,7 @@ func NewNatsHook(conn *nats.Conn, subject string) *NatsHook {
 		subject:       subject,
 		extraFields:   make(map[string]interface{}),
 		dynamicFields: make(map[string]func() interface{}),
-		formatter:     &logrus.JSONFormatter{},
+		Formatter:     &logrus.JSONFormatter{},
 		LogLevels: []logrus.Level{
 			logrus.PanicLevel,
 			logrus.FatalLevel,
@@ -96,7 +96,7 @@ func (hook *NatsHook) Fire(entry *logrus.Entry) error {
 		entry.Data[k] = generator()
 	}
 
-	bytes, err := hook.formatter.Format(entry)
+	bytes, err := hook.Formatter.Format(entry)
 	if err != nil {
 		return err
 	}
