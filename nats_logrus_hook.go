@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/nats-io/nats"
+	"github.com/sirupsen/logrus"
 )
 
 // HookConf defines the vars needed to connect to nats and add the logrus hook

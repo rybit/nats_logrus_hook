@@ -1,8 +1,9 @@
 package: github.com/rybit/nats_logrus_hook
 import:
-- package: github.com/Sirupsen/logrus
-  version: v0.10.0
 - package: github.com/nats-io/nats
+  version: v1.2.2
+- package: github.com/sirupsen/logrus
+  version: v1.0.0
 testImport:
 - package: github.com/stretchr/testify
   version: v1.1.4

@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/nats-io/nats"
+	"github.com/sirupsen/logrus"
 )
 
 // NatsConfig represents the minimum entries that are needed to connect to Nats over TLS

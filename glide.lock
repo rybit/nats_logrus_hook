@@ -1,35 +1,43 @@
-hash: 41357369e02903799e65ee8b7d041a2565c002c32193ccc952edb9f339fdc1ed
-updated: 2016-10-19T13:25:12.673714174-07:00
+hash: cc16885b3b3777c7d1db305f84a71049b608f5f4797e8b7388691bdf7b16ef9c
+updated: 2017-07-05T13:30:45.711479926-07:00
 imports:
 - name: github.com/nats-io/gnatsd
-  version: 10cd7aa16dee1346be2735ec5337d5b321268dfe
+  version: 6a0830fbdc523a05f9564f5f3f46a4000b8d122c
   subpackages:
   - server
   - test
   - conf
+  - logger
   - server/pse
-  - auth
+  - util
 - name: github.com/nats-io/nats
-  version: 6b36ef1fe4714d0bff9316385f3b5410a378a6f9
+  version: 61923ed1eaf8398000991fbbee2ef11ab5a5be0d
   subpackages:
   - test
   - encoders/builtin
+  - util
 - name: github.com/nats-io/nuid
-  version: 289cccf02c178dc782430d534e3c1f5b72af807f
-- name: github.com/Sirupsen/logrus
-  version: 4b6ea7319e214d98c938f12692336f7ca9348d6b
+  version: 3cf34f9fca4e88afa9da8eabd75e3326c9941b44
+- name: github.com/sirupsen/logrus
+  version: 202f25545ea4cf9b191ff7f846df5d87c9382c2b
   subpackages:
   - hooks/test
 - name: golang.org/x/crypto
-  version: 9e7f5dc375abeb9619ea3c5c58502c428f457aa2
+  version: 9477e0b78b9ac3d0b03822fd95422e2fe07627cd
   repo: https://go.googlesource.com/crypto
   subpackages:
   - bcrypt
   - blowfish
 - name: golang.org/x/sys
-  version: 002cbb5f952456d0c50e0d2aff17ea5eca716979
+  version: f7928cfef4d09d1b080aa2b6fd3ca9ba1567c733
   subpackages:
   - unix
+  - windows/svc
+  - windows/svc/debug
+  - windows/svc/mgr
+  - windows/svc/eventlog
+  - windows
+  - windows/registry
 testImports:
 - name: github.com/davecgh/go-spew
   version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9

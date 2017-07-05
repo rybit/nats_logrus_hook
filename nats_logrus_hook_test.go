@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Sirupsen/logrus"
-	ltest "github.com/Sirupsen/logrus/hooks/test"
 	"github.com/nats-io/nats"
 	"github.com/nats-io/nats/test"
+	"github.com/sirupsen/logrus"
+	ltest "github.com/sirupsen/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
 )
 
