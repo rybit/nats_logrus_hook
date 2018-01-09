@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/nats-io/nats"
+	"github.com/nats-io/go-nats"
 	"github.com/sirupsen/logrus"
 )
 

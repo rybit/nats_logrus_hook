@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nats-io/nats"
-	"github.com/nats-io/nats/test"
+	"github.com/nats-io/go-nats"
+	"github.com/nats-io/gnatsd/test"
 	"github.com/sirupsen/logrus"
 	ltest "github.com/sirupsen/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
